@@ -1,0 +1,10 @@
+version: "3"
+services:
+  template-py-rest-microservice:
+    image: py-rest
+    ports:
+      - 8000:8000
+  beaver-ui
+    image: beaver-ui
+    ports:
+      - 3000:3000
