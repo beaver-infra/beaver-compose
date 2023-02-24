@@ -1,0 +1,19 @@
+version: 3
+
+services:
+
+  pyrest:
+    build:
+      context: ./template-py-rest-microservice
+      dockerfile: Dockerfile.dev
+      volumes:
+        - /usr/app/node_modules
+        - ./template-py-rest-microservice:/usr/app/
+
+  noderest:
+    build:
+      context: ./template-node-rest-microservice
+      dockerfile: Dockerfile.dev
+      volumes:
+        - /usr/app/node_modules
+        - ./template-node-rest-microservice:/usr/app/
